@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./resources/css/style.css">
 
 </head>
 
@@ -18,7 +18,6 @@
 
     <!-- header section starts  -->
     <?php require_once './components/header.php' ?>
-
     <!-- home section ends -->
 
     <!-- about section starts  -->
@@ -33,7 +32,7 @@
         <div class="row">
 
             <div class="video-container">
-                <video src="images/aboutvid1.mp4" loop autoplay muted></video>
+                <video src="./resources/images/aboutvid1.mp4" loop autoplay muted></video>
                 <h3>Just into a classic way</h3>
             </div>
 
@@ -55,7 +54,7 @@
     <section class="icons-container">
 
         <div class="icons">
-            <img src="images/icon-1.png" alt="">
+            <img src="./resources/images/icon-1.png" alt="">
             <div class="info">
                 <h3>free delivery</h3>
                 <span>on all orders</span>
@@ -63,7 +62,7 @@
         </div>
 
         <div class="icons">
-            <img src="images/icon-2.png" alt="">
+            <img src="./resources/images/icon-2.png" alt="">
             <div class="info">
                 <h3>10 days returns</h3>
                 <span>moneyback guarantee</span>
@@ -71,7 +70,7 @@
         </div>
 
         <div class="icons">
-            <img src="images/icon-3.png" alt="">
+            <img src="./resources/images/icon-3.png" alt="">
             <div class="info">
                 <h3>offer & gifts</h3>
                 <span>on all orders</span>
@@ -79,7 +78,7 @@
         </div>
 
         <div class="icons">
-            <img src="images/icon-4.png" alt="">
+            <img src="./resources/images/icon-4.png" alt="">
             <div class="info">
                 <h3>secure paymens</h3>
                 <span>protected by paypal</span>
@@ -266,7 +265,7 @@
                 </div>
                 <p></p>
                 <div class="user">
-                    <img src="images/pic-1.png" alt="">
+                    <img src="./resources/images/pic-1.png" alt="">
                     <div class="user-info">
                         <h3>john deo</h3>
                         <span>happy customer</span>
@@ -285,7 +284,7 @@
                 </div>
                 <p></p>
                 <div class="user">
-                    <img src="images/pic-2.png" alt="">
+                    <img src="./resources/images/pic-2.png" alt="">
                     <div class="user-info">
                         <h3>john deo</h3>
                         <span>happy customer</span>
@@ -304,7 +303,7 @@
                 </div>
                 <p></p>
                 <div class="user">
-                    <img src="images/pic-3.png" alt="">
+                    <img src="./resources/images/pic-3.png" alt="">
                     <div class="user-info">
                         <h3>john deo</h3>
                         <span>happy customer</span>
@@ -336,7 +335,7 @@
             </form>
 
             <div class="image">
-                <img src="images/contact-img.svg" alt="">
+                <img src="./resources/images/contact-img.svg" alt="">
             </div>
 
         </div>
@@ -350,7 +349,7 @@
     <!-- footer section ends -->
     
 
-    <script src="./js/main.js"></script>
+    <script src="./resources/js/main.js"></script>
 </body>
 
 </html>

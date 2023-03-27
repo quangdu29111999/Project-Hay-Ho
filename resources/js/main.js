@@ -2,18 +2,24 @@ const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
 const header = $('header')
-console.log(header)
 const navbar = $$('.navbar > a')
 
+
+const login = $('.fas.fa-user')
+
 // scrollDown -> hide navbar &  scrollUp -> show navbar 
-let lastScrollTop = 0
-window.addEventListener('scroll', () => {
-    let scrollTop = window.pageYOffset;
-    if (scrollTop > lastScrollTop) {
+let lastScrollTop = 0;
+window.onscroll = () => {
+    let currentScroll = window.pageYOffset;
+    if (currentScroll > lastScrollTop) {
         header.style.display = 'none'
-    } else if (scrollTop < lastScrollTop) {
+    } else if (currentScroll < lastScrollTop) {
         header.style.display = 'flex'
     }
-    lastScrollTop = scrollTop
-})
+    lastScrollTop = currentScroll
+}
+
+login.onclick = () => {
+    
+}
 

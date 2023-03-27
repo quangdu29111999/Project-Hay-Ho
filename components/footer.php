@@ -32,7 +32,7 @@
             <a href="#">+0971444522</a>
             <a href="#">quangdu29111999@gmail.com</a>
             <a href="#">Hanoi</a>
-            <img src="images/payment.png" alt="">
+            <img src="./resources/images/payment.png" alt="">
         </div>
 
     </div>
