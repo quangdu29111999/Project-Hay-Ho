@@ -2,10 +2,8 @@ const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
 const header = $('header')
-const navbar = $$('.navbar > a')
-
-
-const login = $('.fas.fa-user')
+const navbar = $$('.navbar');
+console.log(navbar)
 
 // scrollDown -> hide navbar &  scrollUp -> show navbar 
 let lastScrollTop = 0;
@@ -19,7 +17,9 @@ window.onscroll = () => {
     lastScrollTop = currentScroll
 }
 
-login.onclick = () => {
-    
-}
+
+
+
+
+
 

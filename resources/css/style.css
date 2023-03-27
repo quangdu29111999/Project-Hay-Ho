@@ -12,6 +12,13 @@
     transition: .2s linear;
 }
 
+/* common */
+
+.status {
+    display: none;
+}
+
+/*  */
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -469,7 +476,14 @@ header .fa-bars{
 
 
 
+/* Oriz */
 
+
+
+
+
+
+/* Oriz */
 
 
 

@@ -1,0 +1,10 @@
+body {
+    background-image: url("../images/backgroundLogin.jpg");
+    background-size: cover;
+}
+
+.formLogin {
+    position: absolute;
+    top: 33%;
+    left: 55%;
+}
