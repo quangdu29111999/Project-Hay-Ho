@@ -10,3 +10,5 @@ do some changes then
 $ git add .
 $ git commit -m "message"
 $ git push origin remote_branch_name
+
+git push --set-upstream origin orriz
