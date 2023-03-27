@@ -1,0 +1,12 @@
+$ git fetch
+check that your branch has come to your local using
+
+$ git branch
+now change your branch using checkout
+
+$ git checkout -b branch_name
+do some changes then
+
+$ git add .
+$ git commit -m "message"
+$ git push origin remote_branch_name
