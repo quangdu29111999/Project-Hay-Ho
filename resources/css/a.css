@@ -6,7 +6,7 @@ body {
 
 .formLogin {
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 55%;
     width: 30%;
 }
@@ -17,6 +17,6 @@ body {
 
 .formRegister {
     position: absolute;
-    top: 25%;
+    top: 10%;
     left: 40%;
 }

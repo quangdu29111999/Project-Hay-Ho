@@ -1,4 +1,4 @@
-use projectuser;
+use haircare;
 
 -- bảng về thương hiệu
 CREATE TABLE IF NOT EXISTS `haircare`.`brand_haircare` (
@@ -150,11 +150,41 @@ CREATE TABLE IF NOT EXISTS `haircare`.`products_images` (
   CONSTRAINT `FK_products_detail_id_products_images`
     FOREIGN KEY (`products_detail_id`)
     REFERENCES `haircare`.`products_detail` (`id`)
-    ON DELETE NO ACTION
+    ON DELETE NO ACTION	
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+show tables;
+use hairecare;
+CREATE TABLE IF NOT EXISTS `haircare`.`accountAdmin` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(255) NULL,
+  `password` VARCHAR(255) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+drop table `haircare`.`accountAdmin`;
 
+    
+CREATE TABLE IF NOT EXISTS `haircare`.`account` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(255) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `status` CHAR(1) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+insert into `haircare`.`account` (username, password, email, status) 
+values 
+	('oriz1303', 'Nguyen123', 'oriz@gmail.com', 0),
+	('quangdu', 'Quangdu123','quangdu@gmail.com', 1);
+    
+    
+select * from `haircare`.`account`;
+    
+
+    
+    
 
 
 

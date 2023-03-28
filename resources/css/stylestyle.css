@@ -18,6 +18,30 @@
     display: none;
 }
 
+
+/* swiper */
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 /*  */
 html{
     font-size: 62.5%;
@@ -35,7 +59,7 @@ section{
     font-size: 4rem;
     color:#333;
     padding:1rem;
-    margin:2rem 0;
+    margin:1rem 0;
     background:rgba(255, 51, 153,.05);
 }
 

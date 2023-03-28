@@ -13,7 +13,7 @@
 
 <section class="products" id="products">
 
-        <h1 class="heading"> latest <span>products</span> </h1>
+        <h1 class="heading"> <br> latest <span>products</span> </h1>
 
         <div class="box-container">
 
