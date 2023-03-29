@@ -9,7 +9,7 @@ if (isset($_POST['signin'])) {
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_assoc($result);
     if (mysqli_num_rows($result) > 0) {
-        header('Location: ../index.php?id='.$row['id']);
+        header('Location: ../home.php?id='.$row['id']);
     } else {
         echo '<script type=text/javascript>alert("that bai")</script>';
     }
