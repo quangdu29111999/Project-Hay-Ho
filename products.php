@@ -4,17 +4,15 @@ require_once './database/mysql.php';
 ?>
 
 <section class="products" id="products">
-
-    <h1 class="heading"> <br> latest <span>products</span> </h1>
-
+    <!-- sản phẩm chăm sóc tóc -->
+    <h1 class="heading"><br>latest <span>products</span> </h1>
+    <p style="font-size: large;">Hair Care</p>
     <div class="box-container">
-
-    <?php while($rowProducts=mysqli_fetch_assoc($resultProducts)) { ?>
-
+        <?php while ($rowProducts = mysqli_fetch_assoc($resultProducts)) { ?>
             <div class="box">
                 <span class="discount">-10%</span>
                 <div class="image">
-                    <img src="resources/images/<?=$rowProducts['url']?>" alt="">
+                    <a href="<?= $rowProducts['name'] ?>"><img src="resources/images/imgProducts/<?= $rowProducts['url'] ?>" alt=""></a>
                     <div class="icons">
                         <a href="#" class="fas fa-heart"></a>
                         <a href="#" class="cart-btn">add to cart</a>
@@ -22,14 +20,18 @@ require_once './database/mysql.php';
                     </div>
                 </div>
                 <div class="content">
-                    <h3><?=$rowProducts['name']?></h3>
-                    <div class="price"> $<?=$rowProducts['price']?> <span>$15.99</span> </div>
-                    <span>asdasdasdasdasdasdasdasd</span>
+                    <h3><?= $rowProducts['name'] ?></h3>
+                    <div class="price"> $<?= $rowProducts['price'] ?> <span>$15.99</span> </div>
+                    <span style="font-size: small;"><?= $rowProducts['title'] ?></span>
                 </div>
             </div>
-
-    <?php } ?>
+        <?php } ?>
     </div>
+</section>
+
+<section>
+    <!-- Thieết bị chăm sóc tóc -->
+    ádasdsad
 </section>
 
 <?php include './components/footer.php' ?>

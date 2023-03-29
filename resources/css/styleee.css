@@ -13,15 +13,65 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: .2s linear;
 }
 
 /* common */
+.d-none {
+    display: none;
+}
 
+.float-right {
+    float: right;
+}
+
+.d-flex {
+    display: flex;
+}
+.p-0 {
+    padding: 0px;
+}
+.m-0 {
+    margin: 0;
+}
+
+.sub-heading {
+    font-size:x-large;
+    text-align: center;
+}
+
+.fs-large {
+    font-size: large;
+}
+.fs-medium {
+    font-size: medium;
+}
+
+.radius {
+    border-radius: 5px;
+}
+
+.w-50 {
+    width: 50%;
+}
+.w-100 {
+    width: 100%;
+}
 
 .status {
     display: none;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.border {
+    border: solid #dbdad7 1px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 
@@ -57,7 +107,6 @@ html {
     overflow-x: hidden;
 }
 
-body:nth-child(2) {}
 
 section {
     padding: 2rem 9%;
@@ -528,15 +577,6 @@ header .fa-bars {
     display: inline-block;
 }
 
-/* #about .swiper .swiper-wrapper > .swiper-slide > img {
-    width: 50%;
-    object-fit: cover;
-}
-#about .swiper .swiper-wrapper > .swiper-slide > div {
-    width: 50%;
-    display: inline-block;
-} */
-
 #about .swiper .swiper-wrapper > .swiper-slide > div {
     height: 100%;
 }
@@ -550,6 +590,46 @@ header .logo p {
     font-size: medium;
     font-family: 'Noto Serif Display', serif;
 }
+
+
+
+
+.login .box-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.login .box-container .box-left-item {
+    flex: 50%;
+    padding: 3rem;
+    border-right: solid #dbdad7 1.5px;
+
+    
+}
+.login .box-container .box-right-item {
+    flex: 50%;
+    padding: 3rem;
+}
+
+.login .box-container > div > div * {
+    margin-bottom: 1.8rem;
+}
+
+
+.submit {
+    background-color: pink;
+    opacity: 0.6;
+}
+.submit:hover {
+    background-color: pink;
+    opacity: 1;
+}
+
+
+
+
 
 
 

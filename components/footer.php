@@ -1,5 +1,5 @@
 
-<section class="footer">
+<section style="background-color: #dbdbdb;" class="footer">
 
     <div class="box-container">
 
@@ -40,4 +40,11 @@
 
 </section>
 <!-- footer section starts  -->
+<!-- <script >
+    <?php //include 'C:\xampp\htdocs\HairCare2\Project-Hay-Ho\resources\js\main.js'?>
+</script> -->
+<script src="./resources/js/mainn.js"></script>
+</body>
+
+</html>
 
