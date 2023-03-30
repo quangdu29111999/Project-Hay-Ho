@@ -42,8 +42,10 @@
 <!-- footer section starts  -->
 <!-- <script >
     <?php //include 'C:\xampp\htdocs\HairCare2\Project-Hay-Ho\resources\js\main.js'?>
+    
 </script> -->
-<script src="./resources/js/mainn.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./resources/js/mainnnsa.js"></script>
 </body>
 
 </html>

@@ -10,12 +10,13 @@ $rowBrand = mysqli_fetch_assoc($resuultBrand);
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
     <title>Document</title>
 
-    <link rel="stylesheet" href="./resources/css/styleee.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./resources/css/styleeee.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
 </head>
 
 <body>
@@ -29,7 +30,9 @@ $rowBrand = mysqli_fetch_assoc($resuultBrand);
         </a>
 
         <nav class="navbar">
-            <a  href="home.php">home</a>
+            <a  href="home.php">home
+                
+            </a>
             <a  href="#about">about</a>
             <a  href="products.php">products</a>
             <a  href="#review">news</a>

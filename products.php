@@ -8,7 +8,8 @@ require_once './database/mysql.php';
     <h1 class="heading"><br>latest <span>products</span> </h1>
     <p style="font-size: large;">Hair Care</p>
     <div class="box-container">
-        <?php while ($rowProducts = mysqli_fetch_assoc($resultProducts)) { ?>
+        <?php
+        while ($rowProducts = mysqli_fetch_assoc($resultProducts)) { ?>
             <div class="box">
                 <span class="discount">-10%</span>
                 <div class="image">
@@ -29,6 +30,7 @@ require_once './database/mysql.php';
     </div>
 </section>
 
+            
 <section>
     <!-- Thieết bị chăm sóc tóc -->
     ádasdsad

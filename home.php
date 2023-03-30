@@ -6,6 +6,7 @@ $resultProducts = mysqli_query($conn, $queryProducts);
 
 require_once './components/header.php'
 ?>
+
 <!-- home section ends -->
 
 <!-- about section starts  -->
@@ -34,42 +35,8 @@ require_once './components/header.php'
                     <a href="#">Tìm hiểu thêm</a>
                 </div>
             </div>
-            <div style="position: relative;
-            display:flex" class="swiper-slide">
-                <div style="width:50%">
-                    <img src="./resources/images/backgroundLogin.jpg" alt="">
-                </div>
-                <div style="width:50%" class="contentSlide">
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum odit sit et laborum veniam iure voluptas eveniet quidem velit fuga.</div>
-                    <div>Tìm hiểu thêm</div>
-                    <a href="#">Tìm hiểu thêm</a>
-                </div>
-            </div>
-            <div style="position: relative;
-            display:flex" class="swiper-slide">
-                <div style="width:50%">
-                    <img src="./resources/images/backgroundLogin.jpg" alt="">
-                </div>
-                <div style="width:50%" class="contentSlide">
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum odit sit et laborum veniam iure voluptas eveniet quidem velit fuga.</div>
-                    <div>Tìm hiểu thêm</div>
-                    <a href="#">Tìm hiểu thêm</a>
-                </div>
-            </div>
+
+
             <div style="position: relative;
             display:flex" class="swiper-slide">
                 <div style="width:50%">
@@ -146,29 +113,108 @@ require_once './components/header.php'
 
 <section class="products" id="products">
 
-    <h1 class="heading"> latest <span>products</span> </h1>
+    <h1 class="heading"> best <span>seller</span> </h1>
 
     <div class="box-container">
+        
+        <div class="swiper home-best-seller">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    
+                    <?php
+                    $queryHomeSellerCream = "SELECT * FROM information_products WHERE title = 'Hair cream'";
+                    $resultHomeSellerCream = mysqli_query($conn, $queryHomeSellerCream);
+                    if (mysqli_num_rows($resultHomeSellerCream) > 0) {
+                        while ($rowHomeSellerCream = mysqli_fetch_assoc($resultHomeSellerCream)) { ?>
 
-        <div class="box">
-            <span class="discount">-10%</span>
-            <div class="image">
-                <img src="https://i.pinimg.com/564x/86/1b/f8/861bf8fb79f6477fc3ec6f4a18a9ed8e.jpg" alt="">
-                <div class="icons">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="cart-btn">add to cart</a>
-                    <a href="#" class="fas fa-share"></a>
+                            <div class="box">
+                                <span class="discount">-10%</span>
+                                <div class="image">
+                                    <img src="resources/images/imgProducts/<?= $rowHomeSellerCream['url'] ?>" alt="">
+                                    <div class="icons">
+                                        <a href="#" class="fas fa-heart"></a>
+                                        <a href="#" class="cart-btn">add to cart</a>
+                                        <a href="#" class="fas fa-share"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h4><?= $rowHomeSellerCream['name'] ?></h4>
+                                    <div class="price"><?= $rowHomeSellerCream['price'] ?><span>$15.99</span> </div>
+                                    <span style="font-size: small;"><?= $rowHomeSellerCream['title'] ?></span>
+                                </div>
+                            </div>
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
+                <div class="swiper-slide">
+                    <?php
+                    $queryHomeSellerCream = "SELECT * FROM information_products WHERE title = 'Professional Sampoo'";
+                    $resultHomeSellerCream = mysqli_query($conn, $queryHomeSellerCream);
+                    if (mysqli_num_rows($resultHomeSellerCream) > 0) {
+                        while ($rowHomeSellerCream = mysqli_fetch_assoc($resultHomeSellerCream)) { ?>
+                            <div class="box">
+                                <span class="discount">-10%</span>
+                                <div class="image">
+                                    <img src="resources/images/imgProducts/<?= $rowHomeSellerCream['url'] ?>" alt="">
+                                    <div class="icons">
+                                        <a href="#" class="fas fa-heart"></a>
+                                        <a href="#" class="cart-btn">add to cart</a>
+                                        <a href="#" class="fas fa-share"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h4><?= $rowHomeSellerCream['name'] ?></h4>
+                                    <div class="price"><?= $rowHomeSellerCream['price'] ?><span>$15.99</span> </div>
+                                    <span style="font-size: small;"><?= $rowHomeSellerCream['title'] ?></span>
+                                </div>
+                            </div>
+                    <?php
+                        }
+                    }
+                    ?>
+                </div>
+                <div class="swiper-slide">
+                    <?php
+                    $queryHomeSellerCream = "SELECT * FROM information_products WHERE title = 'Hair Sprays Good'";
+                    $resultHomeSellerCream = mysqli_query($conn, $queryHomeSellerCream);
+                    if (mysqli_num_rows($resultHomeSellerCream) > 0) {
+                        while ($rowHomeSellerCream = mysqli_fetch_assoc($resultHomeSellerCream)) { ?>
+                            <h3></h3>
+                            <div class="box">
+                                <span class="discount">-10%</span>
+                                <div class="image">
+                                    <img src="resources/images/imgProducts/<?= $rowHomeSellerCream['url'] ?>" alt="">
+                                    <div class="icons">
+                                        <a href="#" class="fas fa-heart"></a>
+                                        <a href="#" class="cart-btn">add to cart</a>
+                                        <a href="#" class="fas fa-share"></a>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h4><?= $rowHomeSellerCream['name'] ?></h4>
+                                    <div class="price"><?= $rowHomeSellerCream['price'] ?><span>$15.99</span> </div>
+                                    <span style="font-size: small;"><?= $rowHomeSellerCream['title'] ?></span>
+                                </div>
+                            </div>
+                    <?php
+                        }
+                    }
+                    ?>
+                </div>
+
             </div>
-            <div class="content">
-                <h3>Produc1</h3>
-                <div class="price"> $12.99 <span>$15.99</span> </div>
-            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-scrollbar"></div>
         </div>
 
 
-
     </div>
+
+
+
 
 </section>
 
@@ -270,22 +316,64 @@ require_once './components/header.php'
 </section>
 
 <section>
-
+    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper home-news">
+        <div class="parallax-bg" style="background-image: url('./resources/images/backgroundLogin.jpg');" data-swiper-parallax="-23%"></div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="title" data-swiper-parallax="-300">Slide 1</div>
+                <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+                <div class="text" data-swiper-parallax="-100">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                        dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                        laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                        Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                        Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                        ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                        tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="title" data-swiper-parallax="-300">Slide 2</div>
+                <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+                <div class="text" data-swiper-parallax="-100">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                        dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                        laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                        Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                        Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                        ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                        tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="title" data-swiper-parallax="-300">Slide 3</div>
+                <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+                <div class="text" data-swiper-parallax="-100">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                        dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                        laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                        Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                        Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                        ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                        tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
 </section>
 
 <!-- contact section ends -->
 
 <!-- footer section starts  -->
 <!-- footer section ends -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        pagination: {
-            el: ".swiper-pagination",
-            dynamicBullets: true,
-        },
-    });
-</script>
 <?php require_once './components/footer.php' ?>
