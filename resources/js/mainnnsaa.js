@@ -20,7 +20,7 @@ var swiper = new Swiper(".home-news", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  
+
 });
 
 
@@ -42,12 +42,34 @@ let lastScrollTop = 0;
 window.onscroll = () => {
   let currentScroll = window.pageYOffset;
   if (currentScroll > lastScrollTop) {
-    header.style.display = 'none'
+    header.style.opacity = 0;
+    header.style.transition = 'opacity 0.5s ease-in-out'
   } else if (currentScroll < lastScrollTop) {
-    header.style.display = 'flex'
+    header.style.opacity = 1
   }
   lastScrollTop = currentScroll
 }
+
+
+//
+const navbarTopics = $$('header .navbar div');
+const navbarTitles = $$('header .navbar div a');
+navbarTopics.forEach(topic => {
+    topic.onmouseover = () => {
+      topic.style.background = "#f0f0f0";
+      if (Boolean(topic.querySelector('ul'))) {
+        topic.querySelector('ul').style.display = 'block'
+      }
+
+    }
+    topic.onmouseout = () => {
+      if (Boolean(topic.querySelector('ul'))) {
+        topic.querySelector('ul').style.display = 'none'
+      }
+      topic.style.background = "#dbdbdb";
+    }
+})
+
 
 
 // toggle signin * sign up 
@@ -76,6 +98,8 @@ transformSignin.onclick = () => {
 
   }
 }
+
+
 
 
 

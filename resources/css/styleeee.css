@@ -16,6 +16,7 @@
     text-decoration: none;
     transition: .2s linear;
     position: relative;
+    cursor: default;
 }
 
 body {}
@@ -23,6 +24,10 @@ body {}
 /* common */
 .d-none {
     display: none;
+}
+
+.d-flex {
+    display: flex;
 }
 
 .float-right {
@@ -39,6 +44,14 @@ body {}
 
 .m-0 {
     margin: 0;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.ms-1 {
+    margin-left: 1rem;
 }
 
 .sub-heading {
@@ -197,6 +210,7 @@ section {
     padding: 1rem;
     margin: 1rem 0;
     background: rgba(255, 51, 153, .05);
+    text-transform: capitalize;
 }
 
 .heading span {
@@ -224,12 +238,13 @@ header {
     left: 0;
     right: 0;
     background: #fff;
-    padding: 2rem 9%;
+    padding: 0 9%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    text-transform: capitalize;
 }
 
 header .logo {
@@ -242,13 +257,35 @@ header .logo span {
     color: var(--pink);
 }
 
-header .navbar a {
-    font-size: 2rem;
+header .navbar div {
+    display: inline-block;
     padding: 2vh 1.5rem;
+}
+
+header .navbar div ul {
+
+    padding: 10px;
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    margin-top: 1.5rem;
+    background-color: #dbdbdb;
+    border-radius: 2px;
+}
+header .navbar div ul > li:not(:last-child) {
+    margin-bottom: 10px;
+}
+header .navbar div ul li a {
+    padding: 0 10px;
+}
+
+header .navbar div a {
+
+    font-size: 2rem;
     color: #666;
 }
 
-header .navbar a:hover {
+header .navbar div a:hover {
     color: var(--pink);
 }
 
@@ -593,6 +630,10 @@ header .fa-bars {
     resize: none;
 }
 
+.footer {
+    text-transform: capitalize;
+}
+
 .footer .box-container {
     display: flex;
     flex-wrap: wrap;
@@ -660,7 +701,7 @@ header .fa-bars {
 }
 
 header .logo {
-    width: 20%;
+    width: 18%;
     text-align: center;
 }
 
@@ -716,9 +757,20 @@ header .logo p {
     flex-wrap: nowrap;
 } */
 
+header .navbar #about:hover ul {
+    display: block;
+}
 
 
 
+
+footer .box-container:last-child {
+    /* width: 100%; */
+}
+
+#maps {
+    width: 82vw;
+}
 
 
 
