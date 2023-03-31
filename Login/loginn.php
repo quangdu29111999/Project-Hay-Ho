@@ -42,7 +42,7 @@
                      <input type="submit" value="Đăng Nhập">
                  </div>
                  <div class="input-form">
-                     <p>Bạn Chưa Có Tài Khoản? <a href="http://localhost/php/dangki.php#">Đăng kí</a></p>
+                     <p>Bạn Chưa Có Tài Khoản? <a href="http://localhost/php/dki.php">Đăng kí</a></p>
                  </div>
              </form>
              <h3>Đăng Nhập Bằng Mạng Xã Hội</h3>
