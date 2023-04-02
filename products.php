@@ -5,11 +5,12 @@ require_once './database/mysql.php';
 
 <section class="products" id="products">
     <!-- sản phẩm chăm sóc tóc -->
-    <h1 class="heading"><br>latest <span>products</span> </h1>
+    <h1 class="heading">latest <span>products</span> </h1>
     <p style="font-size: large;">Hair Care</p>
     <div class="box-container">
         <?php
-        while ($rowProducts = mysqli_fetch_assoc($resultProducts)) { ?>
+        while ($rowProducts = mysqli_fetch_assoc($resultProducts)) {
+        ?>
             <div class="box">
                 <span class="discount">-10%</span>
                 <div class="image">
@@ -21,7 +22,7 @@ require_once './database/mysql.php';
                     </div>
                 </div>
                 <div class="content">
-                    <h3><?= $rowProducts['name'] ?></h3>
+                    <h3 class="fs-medium"><?= $rowProducts['name'] ?></h3>
                     <div class="price"> $<?= $rowProducts['price'] ?> <span>$15.99</span> </div>
                     <span style="font-size: small;"><?= $rowProducts['title'] ?></span>
                 </div>
@@ -30,7 +31,7 @@ require_once './database/mysql.php';
     </div>
 </section>
 
-            
+
 <section>
     <!-- Thieết bị chăm sóc tóc -->
     ádasdsad
@@ -38,7 +39,7 @@ require_once './database/mysql.php';
 
 <?php include './components/footer.php' ?>
 
-<script src="./resources/js/main.js"></script>
+<script src="./resources/js/mainm.js"></script>
 </body>
 
 </html>

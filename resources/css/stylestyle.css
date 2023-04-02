@@ -22,6 +22,15 @@
 body {}
 
 /* common */
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-1 {
+    opacity: 1;
+}
+
+
 .d-none {
     display: none;
 }
@@ -200,7 +209,7 @@ html {
 
 
 section {
-    padding: 2rem 9%;
+    padding: 0rem 22%;
 }
 
 .heading {
@@ -233,13 +242,12 @@ section {
 }
 
 header {
-    position: fixed;
+    /* position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 0; */
+    width: 100%;
     background: #fff;
-    padding: 0 9%;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
@@ -248,6 +256,7 @@ header {
 }
 
 header .logo {
+    width: 20%;
     font-size: 3rem;
     color: #333;
     font-weight: bolder;
@@ -257,9 +266,18 @@ header .logo span {
     color: var(--pink);
 }
 
+header .navbar {
+    padding: 0 21%;
+    display: flex;
+}
+
+header .navbar-top {
+    padding: 5rem 0;
+}
+
 header .navbar div {
     display: inline-block;
-    padding: 2vh 1.5rem;
+    padding: 1.6vh 2rem;
 }
 
 header .navbar div ul {
@@ -272,15 +290,16 @@ header .navbar div ul {
     background-color: #dbdbdb;
     border-radius: 2px;
 }
-header .navbar div ul > li:not(:last-child) {
+
+header .navbar div ul>li:not(:last-child) {
     margin-bottom: 10px;
 }
+
 header .navbar div ul li a {
     padding: 0 10px;
 }
 
 header .navbar div a {
-
     font-size: 2rem;
     color: #666;
 }
@@ -438,7 +457,7 @@ header .fa-bars {
 }
 
 .products .box-container .box {
-    flex: 2 2 32rem;
+    flex: 20%;
     box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
     border-radius: .5rem;
     border: .1rem solid rgba(0, 0, 0, .1);
@@ -465,7 +484,7 @@ header .fa-bars {
 }
 
 .products .box-container .box .image img {
-    height: 25rem;
+    height: 13rem;
 }
 
 .products .box-container .box:hover .image img {
@@ -485,9 +504,9 @@ header .fa-bars {
 }
 
 .products .box-container .box .image .icons a {
-    height: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
     width: 50%;
     background: var(--pink);
     color: #fff;
@@ -509,12 +528,12 @@ header .fa-bars {
 }
 
 .products .box-container .box .content h3 {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     color: #333;
 }
 
 .products .box-container .box .content .price {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: var(--pink);
     font-weight: bolder;
     padding-top: 1rem;
@@ -632,6 +651,7 @@ header .fa-bars {
 
 .footer {
     text-transform: capitalize;
+    background-color: #dbdbdb;
 }
 
 .footer .box-container {
@@ -685,10 +705,18 @@ header .fa-bars {
 
 
 /* Oriz */
-
+.marquee {
+    display: flex;
+    text-align: center;
+    background-color: var(--pink);
+    padding: 10px;
+    font-size: small;
+    color: black;
+}
 
 #about {
-    padding: 0;
+    width: 100%;
+    padding: 0 21%;
 }
 
 #about .swiper .swiper-wrapper>.swiper-slide {
@@ -706,9 +734,34 @@ header .logo {
 }
 
 header .logo p {
-    font-size: medium;
+    font-size: x-large;
     font-family: 'Noto Serif Display', serif;
 }
+
+header .find {
+    font-size: medium;
+    border: 1px solid #dbdbdb;
+    border-radius: 6px;
+    background-color: #dbdbdb;
+}
+
+header .find span{
+    margin-right: 2px;
+}
+header .find * {
+}
+header .find *:not(input){
+    padding: 8px;
+}
+header .find input {
+   width: 54px;
+}
+header .find input:focus {
+   width: 200px;
+
+}
+
+
 
 
 
@@ -773,6 +826,34 @@ footer .box-container:last-child {
 }
 
 
+section .home-news {
+    gap: 4.6rem;
+}
+
+section .home-news > div > div {
+    text-align: center;
+}
+section .home-news > div > div h3 {
+    font-size: 1.5rem;
+}
+section .home-news > div > div * {
+    margin-top: 1rem;
+}
+section .home-news > div > div p {
+    font-size: 1.3rem;
+}
+section .home-news > div > div button {
+    background: #dbdbdb;
+    padding: 1.4rem;
+}
+
+
+.invalid input{
+    border: red solid 1px;
+}
+.invalid span{
+    color: red ;
+}
 
 /* Oriz */
 

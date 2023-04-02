@@ -20,22 +20,22 @@ if (isset($_POST['signin-submit'])) {
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_assoc($result);
 
-    if(mysqli_num_rows($result)) {
-        if($row['status'] === '0') {
+    if (mysqli_num_rows($result)) {
+        if ($row['status'] === '0') {
             header('Location: home.php');
-        } else  {
+        } else {
             header('Location: admin.php');
         }
     } else {
     }
 };
 $errorUsername = $errorEmail = '';
-if(isset($_POST['signup-submit'])) {
+if (isset($_POST['signup-submit'])) {
     $username = checkInput($_POST['signup-username']);
     $email = checkInput($_POST['signup-email']);
     $password = checkInput($_POST['signup-password']);
     $re_password = checkInput($_POST['signup-password']);
-    
+
     // $queryCheck = "SELECT * FROM account";
     // $resultCheck = mysqli_query($conn, $queryCheck);
     // while ($row = mysqli_fetch_assoc($resultCheck)) {
@@ -48,13 +48,12 @@ if(isset($_POST['signup-submit'])) {
     //         echo '<script>alert('.$errorEmail.')</script>';
     //     }
     // }
-    if(empty($errorUsername) && empty($errorEmail)) {
+    if (empty($errorUsername) && empty($errorEmail)) {
         $query = "INSERT INTO account(username, password, email, status) Values ('$username', '$password', '$email', '0');";
         $result = mysqli_query($conn, $query);
+        echo '<script>alert("Dang ky thanh cong")</script>';
         header('Location: home.php');
     }
-
-
 }
 
 
@@ -62,17 +61,23 @@ if(isset($_POST['signup-submit'])) {
 
 
 <section class="login" id="login">
-    <h1 class="heading"><br>Login</h1>
+    <h1 class="heading">Login</h1>
     <div class="box-container">
         <div class="box-left-item">
-            <div class="signin ">
+            <div class="signin">
                 <h1 class="sub-heading">Sign in</h1>
-                <form action="" method="POST">
-                    <label class="fs-large" for="">Username & email:</label><br>
-                    <input name="signin-username" class="fs-medium radius p-10 w-100 border" type="text" placeholder="Enter here" autofocus><br>
-                    <label class="fs-large" for="">Password:</label><br>
-                    <input name="signin-password" class="fs-medium radius p-10 w-100 border" type="password" placeholder="Enter here">
-                    <button name="signin-submit" class="submit fs-medium radius w-100 p-10" type="submit">Sign in</button>
+                <form id="signin" action="" method="POST">
+                    <div class="form-group">
+                        <label class="fs-large" for="">Username & email:</label><br>
+                        <input name="signinUsername" rules="required" class="fs-medium radius p-10 w-100 border" type="text" placeholder="Enter here" autofocus>
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="fs-large" for="">Password:</label><br>
+                        <input name="signinPassword" rules="required" class="fs-medium radius p-10 w-100 border" type="password" placeholder="Enter here">
+                        <span class="form-message"></span>
+                    </div>
+                    <button name="signinSubmit" class="submit fs-medium radius w-100 p-10" type="submit">Sign in</button>
                     <div class="w-100 m-0 d-flex">
                         <div class="w-50">
                             <input class="m-0" type="checkbox" name="" id="">
@@ -86,16 +91,28 @@ if(isset($_POST['signup-submit'])) {
             </div>
             <div class="signup d-none">
                 <h1 class="sub-heading">Sign up</h1>
-                <form action="" method="post">
-                    <label class="fs-large" for="">Username:</label><br>
-                    <input name="signup-username" class="fs-medium radius p-10 w-100 border" type="text" placeholder="Enter here" autofocus><br>
-                    <label class="fs-large" for="">Email:</label><br>
-                    <input name="signup-email" class="fs-medium radius p-10 w-100 border" type="text" placeholder="Enter here"><br>
-                    <label class="fs-large" for="">Password:</label><br>
-                    <input name="signup-password" class="fs-medium radius p-10 w-100 border" type="text" placeholder="Enter here"><br>
-                    <label class="fs-large" for="">Re-Password:</label><br>
-                    <input name="signup-re-password" class="fs-medium radius p-10 w-100 border" type="text" placeholder="Enter here">
-                    <button name="signup-submit" class="submit fs-medium radius w-100 p-10" type="submit">Sign up</button>
+                <form id="sign-up" action="" method="post">
+                    <div class="form-group">
+                        <label class="fs-large" for="">Username:</label><br>
+                        <input rules="required" name="signupUsername" class="fs-medium radius p-10 w-100 border" type="text" placeholder="Enter here" autofocus>
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="fs-large" for="">Email:</label><br>
+                        <input rules="required|email" name="signupEmail" class="fs-medium radius p-10 w-100 border" type="text" placeholder="Enter here">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="fs-large" for="">Password:</label><br>
+                        <input rules="required|min:6" name="signupPassword" class="fs-medium radius p-10 w-100 border" type="text" placeholder="Enter here">
+                        <span class="form-message"></span>
+                    </div>
+                    <!-- <div class="form-group">
+                        <label class="fs-large" for="">Re-Password:</label><br>
+                        <input rules="required" name="signupRepassword" class="fs-medium radius p-10 w-100 border" type="text" placeholder="Enter here">
+                        <span class="form-message"></span>
+                    </div> -->
+                    <button name="signupSubmit" class="submit fs-medium radius w-100 p-10" type="submit">Sign up</button>
                 </form>
             </div>
         </div>
@@ -115,3 +132,10 @@ if(isset($_POST['signup-submit'])) {
 <?php
 require_once './components/footer.php'
 ?>
+
+<script src="./resources/js/validator.js"></script>
+<script>
+    Validator('#sign-up');
+    Validator('#signin');
+
+</script>

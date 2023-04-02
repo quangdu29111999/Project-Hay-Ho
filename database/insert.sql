@@ -1,5 +1,4 @@
-INSERT INTO `products` (
-products)
+INSERT INTO `products` (products)
 VALUES
     ('Cream Dove'),
     ('Cream LOreal'),
@@ -22,11 +21,11 @@ VALUES
     ('Hairspays TRESemme'),
     ('Hairspays Tsubaki'),
     ('Oils Double Rich'),
-    ('Oils LOreal'),
+    ('Oils LOreal'),    
     ('Oils Some By Mi'),
     ('Oils Tsubaki');
 
-INSERT INTO `products_detail` ()
+INSERT INTO `products_detail` (price, description, products_id, name, guide)
 VALUES
     ('12.99', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores soluta veritatis? Inventore veritatis maiores, voluptatibus optio nam at aliquam commodi quisquam accusantium esse ad natus dignissimos aliquid quae. Ex praesentium corporis temporibus eaque in qui hic facilis consequatur quae iure voluptatum obcaecati enim tenetur nesciunt similique nisi atque repellendus minus sit, fugiat ea, corrupti modi. Quod illo possimus iusto distinctio voluptatem perferendis excepturi eos illum. Quas blanditiis reiciendis veniam, excepturi explicabo eum quaerat. Nemo doloremque nam voluptas, enim dolore facere ipsum fugiat. Cumque, nisi. Quos ut quidem repudiandae impedit minima soluta aliquid quod, eius autem quas ex alias harum.', 1, 'Hair cream', '<h5>User manual<h5><br>\n<p><b>Step 1:</b>Apply a sufficient amount of shampoo to the hair, gently rub and focus on the oily skin.</p><br>\n<p><b>Step 2:</b>After rinsing the shampoo, take an appropriate amount of conditioner in the palm of your hand. Gently stroke the conditioner from the body to the ends of the hair, keeping in mind that it is 10-15 cm away from the hairline and do not apply to the scalp.</p><br>\n<p><b>Step 3:</b>Wait for the conditioner to absorb for 1-3 minutes, then rinse with warm or cool water (do not use hot water).</p>'),
     ('9.89', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores soluta veritatis? Inventore veritatis maiores, voluptatibus optio nam at aliquam commodi quisquam accusantium esse ad natus dignissimos aliquid quae. Ex praesentium corporis temporibus eaque in qui hic facilis consequatur quae iure voluptatum obcaecati enim tenetur nesciunt similique nisi atque repellendus minus sit, fugiat ea, corrupti modi. Quod illo possimus iusto distinctio voluptatem perferendis excepturi eos illum. Quas blanditiis reiciendis veniam, excepturi explicabo eum quaerat. Nemo doloremque nam voluptas, enim dolore facere ipsum fugiat. Cumque, nisi. Quos ut quidem repudiandae impedit minima soluta aliquid quod, eius autem quas ex alias harum.', 2, 'Hair cream', '<h5>User manual<h5><br>\n<p><b>Step 1:</b>Apply a sufficient amount of shampoo to the hair, gently rub and focus on the oily skin.</p><br>\n<p><b>Step 2:</b>After rinsing the shampoo, take an appropriate amount of conditioner in the palm of your hand. Gently stroke the conditioner from the body to the ends of the hair, keeping in mind that it is 10-15 cm away from the hairline and do not apply to the scalp.</p><br>\n<p><b>Step 3:</b>Wait for the conditioner to absorb for 1-3 minutes, then rinse with warm or cool water (do not use hot water).</p>'),
@@ -54,30 +53,30 @@ VALUES
     ('53.59', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores soluta veritatis? Inventore veritatis maiores, voluptatibus optio nam at aliquam commodi quisquam accusantium esse ad natus dignissimos aliquid quae. Ex praesentium corporis temporibus eaque in qui hic facilis consequatur quae iure voluptatum obcaecati enim tenetur nesciunt similique nisi atque repellendus minus sit, fugiat ea, corrupti modi. Quod illo possimus iusto distinctio voluptatem perferendis excepturi eos illum. Quas blanditiis reiciendis veniam, excepturi explicabo eum quaerat. Nemo doloremque nam voluptas, enim dolore facere ipsum fugiat. Cumque, nisi. Quos ut quidem repudiandae impedit minima soluta aliquid quod, eius autem quas ex alias harum.', 24, 'Varios hair oils', '<h5>User manual<h5><br>\n<p><b>Step 1:</b>Apply a sufficient amount of shampoo to the hair, gently rub and focus on the oily skin.</p><br>\n<p><b>Step 2:</b>After rinsing the shampoo, take an appropriate amount of conditioner in the palm of your hand. Gently stroke the conditioner from the body to the ends of the hair, keeping in mind that it is 10-15 cm away from the hairline and do not apply to the scalp.</p><br>\n<p><b>Step 3:</b>Wait for the conditioner to absorb for 1-3 minutes, then rinse with warm or cool water (do not use hot water).</p>');
 
 
-
-INSERT INTO products_images(url, products_detail_id)
-VALUES 
-    ('', 1),
-    ('', 2),
-    ('', 3),
-    ('', 4),
-    ('', 5),
-    ('', 6),
-    ('', 7),
-    ('', 8),
-    ('', 9),
-    ('', 10),
-    ('', 11),
-    ('', 12),
-    ('', 13),
-    ('', 14),
-    ('', 15),
-    ('', 16),
-    ('', 17),
-    ('', 18),
-    ('', 19),
-    ('', 20),
-    ('', 21),
-    ('', 22),
-    ('', 23),
-    ('', 24);
+INSERT INTO products_images
+    (url, products_detail_id)
+VALUES
+    (1, 'duongtoc-dove.jpg', 1),
+    (2, 'duongtoc-loreal.jpg', 2),
+    (3, 'duongtoc-ellips.jpg', 3),
+    (4, 'duongtoc-organist.jpg', 4),
+    (5, 'daugoi-cocoon.png', 5),
+    (6, 'daugoi-selsun.jpg', 6),
+    (7, 'daugoi-tresemme.jpg', 7),
+    (8, 'daugoi-tsubaki-cool.jpg', 8),
+    (9, 'matna-bnbg-combo10.jpg', 9),
+    (10, 'matna-caryophy.jpg', 10),
+    (11, 'matna-klaris.jpg', 11),
+    (12, 'matna-naruko.jpg', 12),
+    (13, 'serum-beauty-labo.jpg', 13),
+    (14, 'serum-cocoon.jpg', 14),
+    (15, 'serum-tresemme.jpg', 15),
+    (16, 'serum-ellips-box.jpg', 16),
+    (17, 'xittoc-double-rich.png', 17),
+    (18, 'xittoc-hairburst.jpg', 18),
+    (19, 'xittoc-tresemme.jpg', 19),
+    (20, 'xittoc-tsubaki.jpg', 20),
+    (21, 'dauduong-doublerich.png', 21),
+    (22, 'dauduong-l-oreal.jpg', 22),
+    (23, 'dauduong-some-by-mi.jpg', 23),
+    (24, 'dauduong-tsubaki.jpg', 24);

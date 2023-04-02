@@ -1,11 +1,24 @@
-const $ = document.querySelector.bind(document)
-const $$ = document.querySelectorAll.bind(document)
 
-const header = $('header')
+
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
+const header = $('header');
 const navbar = $$('.navbar');
 
+// START VALIDATOR FORM
+
+
+// END VALIDATOR FORM
+
+ /// SWIPER 
 
 var swiper = new Swiper(".mySwiper", {
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  loop: true,
   pagination: {
     el: ".swiper-pagination",
     dynamicBullets: true,
@@ -55,24 +68,30 @@ window.onscroll = () => {
 const navbarTopics = $$('header .navbar div');
 const navbarTitles = $$('header .navbar div a');
 navbarTopics.forEach(topic => {
-    topic.onmouseover = () => {
-      topic.style.background = "#f0f0f0";
-      if (Boolean(topic.querySelector('ul'))) {
-        topic.querySelector('ul').style.display = 'block'
-      }
+  topic.onmouseover = () => {
+    topic.style.background = "#f0f0f0";
+    if (Boolean(topic.querySelector('ul'))) {
+      topic.querySelector('ul').style.display = 'block'
+    }
 
+  }
+  topic.onmouseout = () => {
+    if (Boolean(topic.querySelector('ul'))) {
+      topic.querySelector('ul').style.display = 'none'
     }
-    topic.onmouseout = () => {
-      if (Boolean(topic.querySelector('ul'))) {
-        topic.querySelector('ul').style.display = 'none'
-      }
-      topic.style.background = "#dbdbdb";
-    }
+    topic.style.background = "#dbdbdb";
+  }
 })
 
 
 
 // toggle signin * sign up 
+
+const signin = $('#signin');
+signin.onsubmit = (e) => {
+  console.log(e)
+  e.preventDefault();
+}
 const transformSignin = $('.transform-signin')
 const transformSignup = $('.transform-signup')
 const formSignin = $('.signin')

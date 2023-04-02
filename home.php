@@ -11,49 +11,22 @@ require_once './components/header.php'
 
 <!-- about section starts  -->
 <section class="about" id="about">
-    <h1 class="heading">
-        <br>
-        <span> about </span> us
-    </h1>
+    <!-- <h1 class="heading"><span> about </span> us</h1>  -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-            <div style="position: relative;
-            display:flex" class="swiper-slide">
-                <div style="width:50%">
-                    <img src="./resources/images/backgroundLogin.jpg" alt="">
+            <div class="swiper-slide">
+                <div class="">
+                    <img src="./resources/images/bo-my-pham-2022.jpg" alt="">
                 </div>
-                <div style="width:50%" class="contentSlide">
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum odit sit et laborum veniam iure voluptas eveniet quidem velit fuga.</div>
-                    <div>Tìm hiểu thêm</div>
-                    <a href="#">Tìm hiểu thêm</a>
-                </div>
+
             </div>
 
 
-            <div style="position: relative;
-            display:flex" class="swiper-slide">
-                <div style="width:50%">
-                    <img src="./resources/images/backgroundLogin.jpg" alt="">
+            <div class="swiper-slide">
+                <div>
+                    <img src="./resources/images/cocoon-my-pham-thuan-chay-viet-nam.jpg" alt="">
                 </div>
-                <div style="width:50%" class="contentSlide">
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm</div>
-                    <div>Tìm hiểu thêm Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum odit sit et laborum veniam iure voluptas eveniet quidem velit fuga.</div>
-                    <div>Tìm hiểu thêm</div>
-                    <a href="#">Tìm hiểu thêm</a>
-                </div>
+
             </div>
 
         </div>
@@ -71,41 +44,7 @@ require_once './components/header.php'
 
 <!-- icons section starts  -->
 
-<section class="icons-container">
 
-    <div class="icons">
-        <img src="./resources/images/icon-1.png" alt="">
-        <div class="info">
-            <h3>free delivery</h3>
-            <span>on all orders</span>
-        </div>
-    </div>
-
-    <div class="icons">
-        <img src="./resources/images/icon-2.png" alt="">
-        <div class="info">
-            <h3>10 days returns</h3>
-            <span>moneyback guarantee</span>
-        </div>
-    </div>
-
-    <div class="icons">
-        <img src="./resources/images/icon-3.png" alt="">
-        <div class="info">
-            <h3>offer & gifts</h3>
-            <span>on all orders</span>
-        </div>
-    </div>
-
-    <div class="icons">
-        <img src="./resources/images/icon-4.png" alt="">
-        <div class="info">
-            <h3>secure paymens</h3>
-            <span>protected by paypal</span>
-        </div>
-    </div>
-
-</section>
 
 <!-- icons section ends -->
 
@@ -116,17 +55,15 @@ require_once './components/header.php'
     <h1 class="heading"> best <span>seller</span> </h1>
 
     <div class="box-container">
-        
+
         <div class="swiper home-best-seller">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    
                     <?php
                     $queryHomeSellerCream = "SELECT * FROM information_products WHERE title = 'Hair cream'";
                     $resultHomeSellerCream = mysqli_query($conn, $queryHomeSellerCream);
                     if (mysqli_num_rows($resultHomeSellerCream) > 0) {
                         while ($rowHomeSellerCream = mysqli_fetch_assoc($resultHomeSellerCream)) { ?>
-
                             <div class="box">
                                 <span class="discount">-10%</span>
                                 <div class="image">
@@ -219,6 +156,101 @@ require_once './components/header.php'
 </section>
 
 <!-- prodcuts section ends -->
+
+<section class="icons-container">
+
+    <div class="icons">
+        <img src="./resources/images/icon-1.png" alt="">
+        <div class="info">
+            <h3>free delivery</h3>
+            <span>on all orders</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="./resources/images/icon-2.png" alt="">
+        <div class="info">
+            <h3>10 days returns</h3>
+            <span>moneyback guarantee</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="./resources/images/icon-3.png" alt="">
+        <div class="info">
+            <h3>offer & gifts</h3>
+            <span>on all orders</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="./resources/images/icon-4.png" alt="">
+        <div class="info">
+            <h3>secure paymens</h3>
+            <span>protected by paypal</span>
+        </div>
+    </div>
+
+</section>
+
+<section>
+    <h1 class="heading">beauty secrets</h1>
+    <div class="home-news d-flex">
+        <div>
+            <img class="w-100" src="./resources/images/imgNews/nyfw.png" alt="">
+            <div>
+                <h3>New York Fashion Week</h3>
+                <p>No doubt Jonathan Simkhai's Spring 2018 Ready-to-Wear collection had a sense of airiness about it — something weve long been waiting for from one of our favorite designers.</p>
+                <button>News Button</button>
+            </div>
+        </div>
+        <div>
+            <img class="w-100" src="./resources/images/imgNews/nyfw.png" alt="">
+            <div>
+                <h3>New York Fashion Week</h3>
+                <p>No doubt Jonathan Simkhai's Spring 2018 Ready-to-Wear collection had a sense of airiness about it — something weve long been waiting for from one of our favorite designers.</p>
+                <button>News Button</button>
+            </div>
+        </div>
+        <div>
+            <img class="w-100" src="./resources/images/imgNews/nyfw.png" alt="">
+            <div>
+                <h3>New York Fashion Week</h3>
+                <p>No doubt Jonathan Simkhai's Spring 2018 Ready-to-Wear collection had a sense of airiness about it — something weve long been waiting for from one of our favorite designers.</p>
+                <button>News Button</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <h1 class="heading">news</h1>
+    <div class="home-news d-flex">
+        <div>
+            <img class="w-100" src="./resources/images/imgNews/nyfw.png" alt="">
+            <div>
+                <h3>New York Fashion Week</h3>
+                <p>No doubt Jonathan Simkhai's Spring 2018 Ready-to-Wear collection had a sense of airiness about it — something weve long been waiting for from one of our favorite designers.</p>
+                <button>News Button</button>
+            </div>
+        </div>
+        <div>
+            <img class="w-100" src="./resources/images/imgNews/nyfw.png" alt="">
+            <div>
+                <h3>New York Fashion Week</h3>
+                <p>No doubt Jonathan Simkhai's Spring 2018 Ready-to-Wear collection had a sense of airiness about it — something weve long been waiting for from one of our favorite designers.</p>
+                <button>News Button</button>
+            </div>
+        </div>
+        <div>
+            <img class="w-100" src="./resources/images/imgNews/nyfw.png" alt="">
+            <div>
+                <h3>New York Fashion Week</h3>
+                <p>No doubt Jonathan Simkhai's Spring 2018 Ready-to-Wear collection had a sense of airiness about it — something weve long been waiting for from one of our favorite designers.</p>
+                <button>News Button</button>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- review section starts  -->
 
@@ -315,6 +347,7 @@ require_once './components/header.php'
 
 </section>
 
+
 <section>
     <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper home-news">
         <div class="parallax-bg" style="background-image: url('./resources/images/backgroundLogin.jpg');" data-swiper-parallax="-23%"></div>
@@ -375,5 +408,7 @@ require_once './components/header.php'
 
 <!-- footer section starts  -->
 <!-- footer section ends -->
+<script>
 
+</script>
 <?php require_once './components/footer.php' ?>

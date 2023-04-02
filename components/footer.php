@@ -1,4 +1,4 @@
-<section style="background-color: #dbdbdb;" class="footer">
+<section class="footer">
 
     <div class="box-container">
 
@@ -49,7 +49,7 @@
     
 </script> -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="./resources/js/mainnnsaa.js"></script>
+<script src="./resources/js/mainmai.js"></script>
 </body>
 
 </html>
