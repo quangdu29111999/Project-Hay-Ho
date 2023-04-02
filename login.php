@@ -104,7 +104,7 @@ if (isset($_POST['signup-submit'])) {
                     </div>
                     <div class="form-group">
                         <label class="fs-large" for="">Password:</label><br>
-                        <input rules="required|min:6" name="signupPassword" class="fs-medium radius p-10 w-100 border" type="text" placeholder="Enter here">
+                        <input rules="required|min:6|max:20" name="signupPassword" class="fs-medium radius p-10 w-100 border" type="text" placeholder="Enter here">
                         <span class="form-message"></span>
                     </div>
                     <!-- <div class="form-group">
@@ -133,7 +133,7 @@ if (isset($_POST['signup-submit'])) {
 require_once './components/footer.php'
 ?>
 
-<script src="./resources/js/validator.js"></script>
+<script src="./resources/js/vvalidator.js"></script>
 <script>
     Validator('#sign-up');
     Validator('#signin');

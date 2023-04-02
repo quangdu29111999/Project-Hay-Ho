@@ -69,7 +69,7 @@ $rowBrand = mysqli_fetch_assoc($resuultBrand);
                     </ul>
                 </div>
                 <div>
-                    <a href="#contact">contact</a>
+                    <a href="contact.php">contact</a>
                 </div>
             </nav>
         </div>

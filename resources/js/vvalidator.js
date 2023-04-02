@@ -22,6 +22,10 @@ const Validator = (formSelector) => {
             let regex = /^\w+([\.\-_]?\w+)*@\w+([\.\-_]?\w+)*(\.\w{2,3})+$/;
             return regex.test(value) ? undefined : 'Enter the correct email format'
         },
+        phone: (value) => {
+            let regex = /^(0|\+84)\d{9}$/;
+            return regex.test(value) ? undefined : 'Enter the correct phone number format'
+        },
         min: (min) => {
             return (value) => {
                 return value.length >= min ? undefined : `Enter at least ${min} characters`

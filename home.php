@@ -325,30 +325,10 @@ require_once './components/header.php'
 
 <!-- contact section starts  -->
 
-<section class="contact" id="contact">
-
-    <h1 class="heading"> <span> contact </span> us </h1>
-
-    <div class="row">
-
-        <form action="">
-            <input type="text" placeholder="name" class="box">
-            <input type="email" placeholder="email" class="box">
-            <input type="number" placeholder="number" class="box">
-            <textarea name="" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
-            <input type="submit" value="send message" class="btn">
-        </form>
-
-        <div class="image">
-            <img src="./resources/images/contact-img.svg" alt="">
-        </div>
-
-    </div>
-
-</section>
 
 
-<section>
+
+<!-- <section>
     <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper home-news">
         <div class="parallax-bg" style="background-image: url('./resources/images/backgroundLogin.jpg');" data-swiper-parallax="-23%"></div>
         <div class="swiper-wrapper">
@@ -402,7 +382,7 @@ require_once './components/header.php'
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
     </div>
-</section>
+</section> -->
 
 <!-- contact section ends -->
 
