@@ -103,15 +103,15 @@ if (isset($_POST['signup-submit'])) {
                         <span class="form-message"></span>
                     </div>
                     <div class="form-group">
+                        <label class="fs-large" for="">Phone Number:</label><br>
+                        <input rules="required|phone" name="signupPhone " class="fs-medium radius p-10 w-100 border" type="text" placeholder="Enter here">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
                         <label class="fs-large" for="">Password:</label><br>
                         <input rules="required|min:6|max:20" name="signupPassword" class="fs-medium radius p-10 w-100 border" type="text" placeholder="Enter here">
                         <span class="form-message"></span>
                     </div>
-                    <!-- <div class="form-group">
-                        <label class="fs-large" for="">Re-Password:</label><br>
-                        <input rules="required" name="signupRepassword" class="fs-medium radius p-10 w-100 border" type="text" placeholder="Enter here">
-                        <span class="form-message"></span>
-                    </div> -->
                     <button name="signupSubmit" class="submit fs-medium radius w-100 p-10" type="submit">Sign up</button>
                 </form>
             </div>

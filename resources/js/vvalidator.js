@@ -26,6 +26,10 @@ const Validator = (formSelector) => {
             let regex = /^(0|\+84)\d{9}$/;
             return regex.test(value) ? undefined : 'Enter the correct phone number format'
         },
+        strongPassword: (value) => {
+            let regex = /^(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*[0-9].*)$/;
+            return regex.test(value) ? undefined : 'Enter the correct phone number format'
+        },
         min: (min) => {
             return (value) => {
                 return value.length >= min ? undefined : `Enter at least ${min} characters`
